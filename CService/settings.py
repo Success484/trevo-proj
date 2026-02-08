@@ -37,6 +37,9 @@ CSRF_TRUSTED_ORIGINS = [
     "https://trevo-proj-production.up.railway.app",
 ]
 
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+
 
 
 # Application definition
