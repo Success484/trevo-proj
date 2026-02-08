@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<div class="message-wrapper">
+  {% if messages %}
+    {% for message in messages %}
+      <div class="alert alert-success" role="alert" tabindex="0">
+        {{ message }}
+        <button type="button" class="alert-close" aria-label="Close message">&times;</button>
+      </div>
+    {% endfor %}
+  {% endif %}
+</div>
+
+<form method="POST" novalidate class="courier-form">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit" class="btn-submit">Submit Booking</button>
+</form>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.alert-close').forEach(button => {
+      button.addEventListener('click', () => {
+        const alert = button.closest('.alert');
+        if (alert) {
+          alert.style.opacity = '0';
+          alert.style.transition = 'opacity 0.3s ease';
+          setTimeout(() => alert.remove(), 300);
+        }
+      });
+    });
+  });
+</script>
+
+{% endblock content %}

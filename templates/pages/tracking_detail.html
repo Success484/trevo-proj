@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="track-container" role="main">
+  <h1 class="track-header" tabindex="0">Tracking: {{ order.tracking_number }}</h1>
+
+
+  <section class="tracking-container-nav">
+  <!-- Shipment Details -->
+  <div class="">
+    <p><strong>📦 Expected Delivery Date :</strong> {{ order.date_of_delivery }}</p>
+  </div>
+
+  <!-- Destination Details -->
+  <div class="">
+    <p><strong>📍 Status :</strong> {{ order.service_type }}</p>
+  </div>
+
+  <!-- Origin -->
+  <div class="">
+    <p><strong>🚚 Date Shipped :</strong> {{ order.created_at|date:"M d, Y H:i" }}</p>
+  </div>
+</section>
+
+
+  <section class="tracking-container">
+  <!-- Shipment Details -->
+  <div class="tracking-card">
+    <h3>📦 Shipment Details</h3>
+    <p><strong>Quantity:</strong> {{ order.quantity }}</p>
+    <p><strong>Weight:</strong> {{ order.weight }} kg</p>
+    <p><strong>Service Type:</strong> {{ order.service_type }}</p>
+    <p><strong>Description:</strong> {{ order.goods_description }}</p>
+    <p><strong>Payment Status:</strong> {{ order.payment_status }}</p>
+  </div>
+
+  <!-- Destination Details -->
+  <div class="tracking-card">
+    <h3>📍 Destination Details</h3>
+    <p><strong>Receiver Name:</strong> {{ order.receiver_name }}</p>
+    <p><strong>Receiver Email:</strong> {{ order.receiver_email }}</p>
+    <p><strong>Receiver Address:</strong> {{ order.receiver_address }}</p>
+    <p><strong>Delivery Location:</strong> {{ order.delivery_address }}</p>
+    <p><strong>Delivery Date:</strong> {{ order.date_of_delivery }}</p>
+  </div>
+
+  <!-- Origin -->
+  <div class="tracking-card">
+    <h3>🚚 Origin</h3>
+    <p><strong>Sender Name:</strong> {{ order.sender_name }}</p>
+    <p><strong>Sender Address:</strong> {{ order.sender_address }}</p>
+    <p><strong>Pickup Address:</strong> {{ order.pickup_address }}</p>
+    <p><strong>Created At:</strong> {{ order.created_at|date:"M d, Y H:i" }}</p>
+  </div>
+</section>
+
+  <section class="track-card map-section" aria-label="Map showing current package location">
+  <h3>Map</h3>
+  {% if events_json %}
+    <div id="tracking-map" tabindex="0" aria-label="Package location map"></div>
+  {% else %}
+    <div class="no-coords-placeholder" tabindex="0">
+      No location coordinates available yet for this package.
+    </div>
+  {% endif %}
+</section>
+
+
+  <section class="track-card history-section" aria-label="Tracking history">
+    <h3>Tracking History</h3>
+    <ul class="track-timeline">
+      {% for event in order.events.all %}
+        <li tabindex="0">
+          <strong>{{ event.status }}</strong> — {{ event.location }}<br />
+          <small>{{ event.timestamp|date:"M d, Y H:i" }}</small>
+          {% if event.note %}
+            <div>{{ event.note }}</div>
+          {% endif %}
+        </li>
+      {% empty %}
+        <li tabindex="0">No tracking events yet.</li>
+      {% endfor %}
+    </ul>
+  </section>
+</div>
+
+<!-- Leaflet JS -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet/dist/leaflet.css"
+/>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script>
+  // events_json is generated server-side; escaped for JS with escapejs filter
+  const events = JSON.parse("{{ events_json|escapejs }}");
+
+  if (events && events.length > 0) {
+    const first = events[0];
+    const map = L.map('tracking-map').setView([first.lat, first.lng], 8);
+
+ L.tileLayer('https://cartodb-basemaps-a.global.ssl.fastly.net/light_all/{z}/{x}/{y}{r}.png', {
+  attribution: '',
+  subdomains: 'abcd',
+  maxZoom: 19
+}).addTo(map);
+
+
+    const latlngs = [];
+    events.forEach(ev => {
+      const marker = L.marker([ev.lat, ev.lng]).addTo(map);
+      const popupHtml =
+        `<strong>${ev.status}</strong><br>${ev.location}<br><small>${new Date(
+          ev.timestamp
+        ).toLocaleString()}</small>` + (ev.note ? `<div>${ev.note}</div>` : '');
+      marker.bindPopup(popupHtml);
+      latlngs.push([ev.lat, ev.lng]);
+    });
+
+    if (latlngs.length > 1) {
+      const poly = L.polyline(latlngs, { color: '#0d6efd', weight: 4 }).addTo(map);
+      map.fitBounds(poly.getBounds(), { padding: [40, 40] });
+    } else {
+      map.setView(latlngs[0], 12);
+    }
+  }
+</script>
+{% endblock content %}

@@ -1,0 +1,635 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<main>
+  <!--? slider Area Start-->
+  <div class="slider-area">
+    <div class="slider-active">
+      <!-- Single Slider -->
+      <div
+        id="home"
+        class="single-slider slider-height d-flex align-items-center"
+      >
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-9 col-lg-9">
+                            {% if messages %}
+              <div style="margin: 15px 0">
+                {% for message in messages %}
+                <div
+                  style="
+        padding: 15px 20px;
+        border-radius: 6px;
+        margin-bottom: 10px;
+        font-size: 18px;
+        font-weight: bold;
+        {% if message.tags == 'error' %}
+          background-color: #fee2e2; color: #991b1b; border: 1px solid #fca5a5;
+        {% elif message.tags == 'success' %}
+          background-color: #dcfce7; color: #166534; border: 1px solid #86efac;
+        {% else %}
+          background-color: #e0f2fe; color: #075985; border: 1px solid #7dd3fc;
+        {% endif %}
+      "
+                >
+                  {{ message }}
+                </div>
+                {% endfor %}
+              </div>
+              {% endif %}
+              <div class="hero__caption">
+                <h1>Safe & Reliable <span>Logistic</span> Solutions!</h1>
+              </div>
+              <!--Hero form -->
+              <form
+                action="#"
+                method="GET"
+                class="tracking-wrapper"
+                aria-label="Package tracking form"
+                id="trackingForm"
+              >
+                <div class="tracking-input-container">
+                  <input
+                    type="text"
+                    id="tracking_number_new"
+                    name="tracking_number"
+                    class="tracking-input"
+                    placeholder="Enter Your Tracking ID"
+                    required
+                    aria-required="true"
+                    aria-label="Tracking number input"
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="tracking-button-container">
+                  <button
+                    type="submit"
+                    class="tracking-button"
+                    aria-label="Submit tracking form"
+                    id="trackingSubmitBtn"
+                  >
+                    Track &amp; Trace
+                  </button>
+                </div>
+              </form>
+              <!-- Hero Pera -->
+              <div class="hero-pera">
+                <p>For order status inquiry</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- slider Area End-->
+  <!--? our info Start -->
+  <div class="our-info-area pt-70 pb-40">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-6">
+          <div class="single-info mb-30">
+            <div class="info-icon">
+              <span class="flaticon-support"></span>
+            </div>
+            <div class="info-caption">
+              <p>Call Us Anytime</p>
+              <span>+ (123) 1800-567-8990</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6">
+          <div class="single-info mb-30">
+            <div class="info-icon">
+              <span class="flaticon-clock"></span>
+            </div>
+            <div class="info-caption">
+              <p>Sunday CLOSED</p>
+              <span>Mon - Sat 8.00 - 18.00</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6">
+          <div class="single-info mb-30">
+            <div class="info-icon">
+              <span class="flaticon-place"></span>
+            </div>
+            <div class="info-caption">
+              <p>Columbia, SC 29201</p>
+              <span>USA, New York - 10620</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- our info End -->
+  <!--? Categories Area Start -->
+  <div class="categories-area section-padding30">
+    <div id="services" class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <!-- Section Tittle -->
+          <div class="section-tittle text-center mb-80">
+            <span>Our Services</span>
+            <h2>What We Can Do For You</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-6">
+          <div class="single-cat text-center mb-50">
+            <div class="cat-icon">
+              <span class="flaticon-shipped"></span>
+            </div>
+            <div class="cat-cap">
+              <h5><a href="javascript:void(0)">Land Delivery</a></h5>
+              <p>
+                Fast and secure delivery across cities and towns. Our fleet of
+                vehicles ensures your parcels reach their destination on time,
+                every time.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6">
+          <div class="single-cat text-center mb-50">
+            <div class="cat-icon">
+              <span class="flaticon-ship"></span>
+            </div>
+            <div class="cat-cap">
+              <h5><a href="javascript:void(0)">Sea Cargo</a></h5>
+              <p>
+                Reliable shipping solutions for bulk and international
+                deliveries. We make overseas shipping smooth and affordable for
+                your business.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6">
+          <div class="single-cat text-center mb-50">
+            <div class="cat-icon">
+              <span class="flaticon-plane"></span>
+            </div>
+            <div class="cat-cap">
+              <h5><a href="javascript:void(0)">Air Express</a></h5>
+              <p>
+                When speed matters most, our air courier service gets your
+                package delivered worldwide in the shortest time possible.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Categories Area End -->
+  <!--? About Area Start -->
+  <div id="about" class="about-low-area padding-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-12">
+          <div class="about-caption mb-50">
+            <!-- Section Title -->
+            <div class="section-tittle mb-35">
+              <span>About Our Company</span>
+              <h2>
+                Reliable Courier & Delivery Solutions That Save Your Time!
+              </h2>
+            </div>
+            <p>
+              We provide fast, secure, and affordable courier services designed
+              to meet your delivery needs. From local dispatches to
+              international shipments, our team ensures that every package is
+              handled with care and delivered on time.
+            </p>
+            <p>
+              With modern tracking systems and a dedicated support team, we make
+              sending and receiving parcels simple and stress-free. Your trust
+              is our priority.
+            </p>
+            <a href="#about" class="btn">About Us</a>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-12">
+          <!-- about-img -->
+          <div class="about-img">
+            <div class="about-font-img">
+              <img
+                src="{% static 'assets/img/gallery/about2.png' %}"
+                alt="Courier service"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- About Area End -->
+  <!--? contact-form start -->
+  <section
+    class="contact-form-area section-bg pt-115 pb-120 fix"
+    data-background="assets/img/gallery/section_bg02.jpg"
+  >
+    <div class="container">
+      <div class="row justify-content-end">
+        <!-- Contact wrapper -->
+        <div class="col-xl-8 col-lg-9">
+          <div id="contact" class="contact-form-wrapper">
+            <!-- From tittle -->
+            <div class="row">
+              <div class="col-lg-12">
+                <!-- Section Tittle -->
+                <div class="section-tittle mb-50">
+                  <span>Get a Quote for Free</span>
+                  <h2>Request a Free Delivery Quote</h2>
+                  <p>
+                    Send us the details of your shipment and we’ll provide you
+                    with a fast and transparent quote. No hidden charges — just
+                    reliable courier services tailored to your needs.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- form -->
+            <form action="#" class="contact-form">
+              <div class="row">
+                <div class="col-lg-6 col-md-6">
+                  <div class="input-form">
+                    <input type="text" placeholder="Name" />
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                  <div class="input-form">
+                    <input type="text" placeholder="Email" />
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="input-form">
+                    <input type="text" placeholder="Contact Number" />
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="select-items">
+                    <select name="select" id="select1">
+                      <option value="">Delivery Type</option>
+                      <option value="documents">Documents</option>
+                      <option value="parcels">Parcels</option>
+                      <option value="bulk">Bulk Shipments</option>
+                      <option value="international">
+                        International Delivery
+                      </option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6">
+                  <div class="input-form">
+                    <input type="text" placeholder="City of Departure" />
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                  <div class="input-form">
+                    <input type="text" placeholder="Incoterms" />
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                  <div class="input-form">
+                    <input type="text" placeholder="Weight" />
+                  </div>
+                </div>
+                <!-- Height Width length -->
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                  <div class="input-form">
+                    <input type="text" placeholder="Height" />
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                  <div class="input-form">
+                    <input type="text" placeholder="Width" />
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                  <div class="input-form">
+                    <input type="text" placeholder="length" />
+                  </div>
+                </div>
+                <!-- Radio Button -->
+                <div class="col-lg-12">
+                  <div class="radio-wrapper mb-30 mt-15">
+                    <label>Extra services:</label>
+                    <div class="select-radio">
+                      <div class="radio">
+                        <input
+                          id="radio-1"
+                          name="radio"
+                          type="radio"
+                          checked=""
+                        />
+                        <label for="radio-1" class="radio-label">Freight</label>
+                      </div>
+                      <div class="radio">
+                        <input id="radio-2" name="radio" type="radio" />
+                        <label for="radio-2" class="radio-label"
+                          >Express Delivery</label
+                        >
+                      </div>
+                      <div class="radio">
+                        <input id="radio-4" name="radio" type="radio" />
+                        <label for="radio-4" class="radio-label"
+                          >Insurance</label
+                        >
+                      </div>
+                      <div class="radio">
+                        <input id="radio-5" name="radio" type="radio" />
+                        <label for="radio-5" class="radio-label"
+                          >Packaging</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Button -->
+                <div class="col-lg-12">
+                  <button name="submit" class="submit-btn">
+                    Request a Quote
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- contact-form end -->
+  <!--Team Ara Start -->
+  <div class="team-area section-padding30">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="cl-xl-7 col-lg-8 col-md-10">
+          <!-- Section Title -->
+          <div class="section-tittle text-center mb-70">
+            <span>Our Team Members</span>
+            <h2>What We Can Do For You</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-6">
+          <div class="single-team mb-30 text-center">
+            <div class="team-img">
+              <img src="{% static 'assets/img/gallery/team1.png' %}" alt="" />
+              <div class="team-caption">
+                <h3><a href="javascript:void(0)">Mancherwan Kolin</a></h3>
+                <p>Logistics Manager</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-6">
+          <div class="single-team mb-30 text-center">
+            <div class="team-img">
+              <img src="{% static 'assets/img/gallery/team2.png' %}" alt="" />
+              <div class="team-caption">
+                <h3><a href="javascript:void(0)">John Hunderson</a></h3>
+                <p>Operations Supervisor</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-6">
+          <div class="single-team mb-30 text-center">
+            <div class="team-img">
+              <img src="{% static 'assets/img/gallery/team3.png' %}" alt="" />
+              <div class="team-caption">
+                <h3><a href="javascript:void(0)">James Jonathan</a></h3>
+                <p>Customer Service Lead</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Team Ara End -->
+  <!--? Testimonial Start -->
+  <div
+    class="testimonial-area testimonial-padding section-bg"
+    data-background="assets/img/gallery/section_bg04.jpg"
+  >
+    <div class="container">
+      <div class="row justify-content-between">
+        <div>
+          <!-- Section Title -->
+          <div class="section-tittle text-center mb-70">
+            <span>Clients Testimonials</span>
+            <h2>What Our Clients Say!</h2>
+          </div>
+          <div
+            style="
+              display: flex;
+              justify-content: center;
+              align-items: flex-start;
+              gap: 30px;
+              flex-wrap: wrap;
+              max-width: 1200px;
+              margin: 0 auto;
+            "
+          >
+            <figure class="snip1157">
+              <blockquote>
+                Fast, reliable, and always on time. Our shipments arrive exactly
+                as scheduled, and tracking is always accurate. Truly a
+                dependable logistics partner.
+                <div class="arrow"></div>
+              </blockquote>
+              <img
+                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample3.jpg"
+                alt="sq-sample3"
+              />
+              <div class="author">
+                <h5>Daniel Brooks <span>Retail Business Owner</span></h5>
+              </div>
+            </figure>
+            <figure class="snip1157 hover">
+              <blockquote>
+                Affordable pricing with premium service. Their delivery speed
+                and customer support are unmatched. We trust them with all our
+                logistics operations.
+                <div class="arrow"></div>
+              </blockquote>
+              <img
+                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample27.jpg"
+                alt="sq-sample27"
+              />
+              <div class="author">
+                <h5>Amanda Johnson <span>E-commerce Manager</span></h5>
+              </div>
+            </figure>
+            <figure class="snip1157">
+              <blockquote>
+                Reliable, fast, and secure logistics. Every delivery arrives
+                safely and on time. Highly recommended for any business that
+                values efficiency.
+                <div class="arrow"></div>
+              </blockquote>
+              <img
+                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample17.jpg"
+                alt="sq-sample17"
+              />
+              <div class="author">
+                <h5>Michael Carter <span>Supply Chain Director</span></h5>
+              </div>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Testimonial End -->
+  <!--? Blog Area Start -->
+  <div class="home-blog-area section-padding30">
+    <div id="blog" class="container">
+      <!-- Section Title -->
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-tittle text-center mb-70">
+            <span>Our Recent News</span>
+            <h2>Courier Blog</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <div class="home-blog-single mb-30">
+            <div class="blog-img-cap">
+              <div class="blog-img">
+                <img
+                  src="{% static 'assets/img/gallery/blog01.png' %}"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="blog-caption">
+              <div class="blog-date text-center">
+                <span>13</span>
+                <p>MAY</p>
+              </div>
+              <div class="blog-cap">
+                <h3>
+                  <a href="javascript:void(0)">
+                    Your Package Is Alway Safe And Secure
+                  </a>
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="home-blog-single mb-30">
+            <div class="blog-img-cap">
+              <div class="blog-img">
+                <img src="{% static 'assets/img/gallery/blog1.png' %}" alt="" />
+              </div>
+            </div>
+            <div class="blog-caption">
+              <div class="blog-date text-center">
+                <span>08</span>
+                <p>AUG</p>
+              </div>
+              <div class="blog-cap">
+                <h3>
+                  <a href="javascript:void(0)">
+                    Express Delivery Can Boost Your Business
+                  </a>
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="home-blog-single mb-30">
+            <div class="blog-img-cap">
+              <div class="blog-img">
+                <img
+                  src="{% static 'assets/img/gallery/blog02.png' %}"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="blog-caption">
+              <div class="blog-date text-center">
+                <span>07</span>
+                <p>SEP</p>
+              </div>
+              <div class="blog-cap">
+                <h3>
+                  <a href="javascript:void(0)">
+                    You Track Your Parcel in Real Time
+                  </a>
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Blog Area End -->
+</main>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("trackingForm");
+    const submitBtn = document.getElementById("trackingSubmitBtn");
+
+    // SVG spinner for loading animation
+    const spinnerSVG = `
+      <svg 
+        xmlns="http://www.w3.org/2000/svg"
+        style="margin: auto; background: none; display: block;"
+        width="20px" 
+        height="20px" 
+        viewBox="0 0 100 100" 
+        preserveAspectRatio="xMidYMid"
+        aria-hidden="true"
+      >
+        <circle cx="50" cy="50" r="30" stroke="#fff" stroke-width="10" stroke-linecap="round" fill="none" />
+        <circle cx="50" cy="50" r="30" stroke="#ff6f00" stroke-width="10" stroke-linecap="round" fill="none" stroke-dasharray="141.37 141.37" stroke-dashoffset="141.37">
+          <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1s" keyTimes="0;1" values="0 50 50;360 50 50" />
+          <animate attributeName="stroke-dashoffset" values="141.37;0" dur="1s" repeatCount="indefinite" />
+        </circle>
+      </svg>
+    `;
+
+    form.addEventListener("submit", (ev) => {
+      // Prevent multiple submissions in case this is just demonstration
+      if (submitBtn.disabled) {
+        ev.preventDefault();
+        return;
+      }
+
+      // Change button text to spinner
+      submitBtn.disabled = true;
+
+      // Save original button content for potential restoration
+      submitBtn.dataset.originalContent = submitBtn.innerHTML;
+
+      submitBtn.innerHTML =
+        spinnerSVG +
+        '<span style="margin-left:8px; font-weight:600;">Loading...</span>';
+
+      // In a real app, submit usually continues or triggers AJAX.
+      // Here we simulate form submit delay (remove below if your form submits normally):
+      // ev.preventDefault(); // Uncomment if you want to test without form actually submitting
+      // setTimeout(() => {
+      //   submitBtn.disabled = false;
+      //   submitBtn.innerHTML = submitBtn.dataset.originalContent;
+      // }, 4000);
+    });
+  });
+</script>
+
+{% endblock content %}
