@@ -34,8 +34,7 @@ SECRET_KEY = env("SECRET_KEY")
 ALLOWED_HOSTS = ['*']
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://cservice-production.up.railway.app",
-    "https://goldenxpresslogistics.website",
+    "https://trevo-proj-production.up.railway.app",
 ]
 
 
