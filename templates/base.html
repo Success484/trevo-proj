@@ -43,6 +43,121 @@
         scroll-behavior: smooth;
     }
 
+    /* Mobile Menu Container */
+    .d-block.d-lg-none {
+      position: relative;
+    }
+
+    /* Mobile Menu Hamburger */
+    .navbar-toggler {
+      background: none;
+      border: none;
+      padding: 8px 12px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      outline: none;
+      z-index: 1000;
+    }
+
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      width: 24px;
+    }
+
+    .hamburger span {
+      width: 100%;
+      height: 3px;
+      background-color: #ff6f00;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    .navbar-toggler.active .hamburger span:nth-child(1) {
+      transform: rotate(45deg) translate(8px, 8px);
+    }
+
+    .navbar-toggler.active .hamburger span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .navbar-toggler.active .hamburger span:nth-child(3) {
+      transform: rotate(-45deg) translate(8px, -8px);
+    }
+
+    /* Mobile Menu Dropdown */
+    .mobile-menu {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: white;
+      min-width: 240px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+      border-radius: 8px;
+      padding: 12px 0;
+      margin-top: 8px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      z-index: 999;
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    .mobile-menu.active {
+      max-height: 500px;
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .mobile-menu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .mobile-menu li {
+      margin: 0;
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 12px 24px;
+      color: #333;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border-left: 3px solid transparent;
+    }
+
+    .mobile-menu a:hover {
+      background-color: #f0f0f0;
+      border-left-color: #ff6f00;
+      color: #ff6f00;
+      padding-left: 28px;
+    }
+
+    .mobile-quote-btn {
+      display: block;
+      margin: 12px 12px 0 12px;
+      text-align: center;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 20px !important;
+      background-color: #ff6f00;
+      color: white;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+
+    .mobile-quote-btn:hover {
+      background-color: #e65c00;
+      border-left-color: transparent !important;
+      color: white;
+      padding-left: 24px !important;
+    }
+
     .message-wrapper {
       max-width: 620px;
       margin: 1.5rem auto 1.5rem auto;
@@ -538,108 +653,108 @@ figure.snip1157 .author h5 span {
   }
   </style>
   <body>
-    <!--? Preloader Start -->
-    <!-- <div id="preloader-active">
-    <div class="preloader d-flex align-items-center justify-content-center">
-        <div class="preloader-inner position-relative">
-            <div class="preloader-circle"></div>
-            <div class="preloader-img pere-text">
-                <img src="{% static 'assets/img/logo/loder.jpg' %}" alt="">
-            </div>
-        </div>
-    </div>
-</div> -->
-    <!-- Preloader Start -->
     <header>
       <!-- Header Start -->
       <div class="header-area">
-        <div class="main-header">
-          <div class="header-top d-none d-lg-block">
-            <div class="container">
-              <div class="col-xl-12">
-                <div class="row d-flex justify-content-between align-items-center">
-                  <div class="header-info-left">
-                    <ul>
-                      <li>Email: expressdelivery647435@gmail.com</li>
-                    </ul>
-                  </div>
-                  <div class="header-info-right">
-                    <ul class="header-social">
-                      <li>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="fab fa-google-plus-g"></i></a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+  <div class="main-header">
+    <div class="header-top d-none d-lg-block">
+      <div class="container">
+        <div class="col-xl-12">
+          <div class="row d-flex justify-content-between align-items-center">
+            <div class="header-info-left">
+              <ul>
+                <li>Email: expressdelivery647435@gmail.com</li>
+              </ul>
+            </div>
+            <div class="header-info-right">
+              <ul class="header-social">
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+              </ul>
             </div>
           </div>
-          <div class="header-bottom header-sticky">
-            <div class="container">
-              <div class="row align-items-center">
-                <!-- Logo -->
-                <div class="col-xl-2 col-lg-2">
-                  <div class="logo" style="display: flex; align-items: center; height: 100px;">
-                    <div>
-                      <a href="{% url 'home' %}"
-                        ><img
-                          src="{% static 'assets/img/logo/logo.png' %}"
-                          alt=""
-                          height="55px"
-                          width="60px"
-                      />
-                    </div>
-                    <div style="position: relative; top: 10px;">
-                      <p style="color: orange; font-size: medium; width: 300px;"><span style="font-size: 24px;"> Express Delivery </span></p></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-10 col-lg-10">
-                  <div
-                    class="menu-wrapper d-flex align-items-center justify-content-end"
-                  >
-                    <!-- Main-menu -->
-                    <div class="main-menu d-none d-lg-block">
-                      <nav>
-                        <ul id="navigation">
-                          <li><a href="{% url 'home' %}">Home</a></li>
-                          <li><a href="#about">About</a></li>
-                          <li><a href="#services">Services</a></li>
-                          <li><a href="#contact">Contact</a></li>
-                          {% if request.user.is_authenticated %}
-                            <li><a href="{% url 'logout' %}">Logout</a></li>
-                          {% else %}
-                          <li><a href="{% url 'login' %}">Login</a></li>
-                          {% endif %}
-                        </ul>
-                      </nav>
-                    </div>
-                    <!-- Header-btn -->
-                    <div class="header-right-btn d-none d-lg-block ml-20">
-                      <a href="#contact" class="btn header-btn"
-                        >Get A Qoue</a
-                      >
-                    </div>
-                  </div>
-                </div>
-                <!-- Mobile Menu -->
-                <div class="col-12">
-                  <div class="mobile_menu d-block d-lg-none"></div>
-                </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-bottom header-sticky">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Logo -->
+          <div class="col-xl-2 col-lg-2 col-6">
+            <div class="logo" style="display: flex; align-items: center; height: 100px;">
+              <a href="{% url 'home' %}">
+                <img
+                  src="{% static 'assets/img/logo/logo.png' %}"
+                  alt=""
+                  height="55px"
+                  width="60px"
+                />
+              </a>
+              <p style="color: #ff6f00; margin-left: 10px; margin-bottom: 0; white-space: nowrap;">
+                <span style="font-size: 24px; font-weight: 500;">Express Delivery</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Desktop Menu and Mobile Toggle in same column -->
+          <div class="col-xl-10 col-lg-10 col-4">
+            <div class="row align-items-center justify-content-end h-100">
+              <!-- Main-menu (Desktop only) -->
+              <div class="main-menu d-none d-lg-block">
+                <nav>
+                  <ul id="navigation">
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    {% if request.user.is_authenticated %}
+                      <li><a href="{% url 'logout' %}">Logout</a></li>
+                    {% else %}
+                      <li><a href="{% url 'login' %}">Login</a></li>
+                    {% endif %}
+                  </ul>
+                </nav>
+              </div>
+
+              <!-- Header-btn (Desktop only) -->
+              <div class="header-right-btn d-none d-lg-block ml-20">
+                <a href="#contact" class="btn header-btn">Get A Quote</a>
+              </div>
+
+              <!-- Mobile Menu Toggle -->
+              <div class="d-block d-lg-none">
+                <button class="navbar-toggler" type="button" id="mobileMenuBtn" aria-label="Toggle navigation">
+                  <span class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </span>
+                </button>
+                <nav class="mobile-menu" id="mobileMenu">
+                  <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    {% if request.user.is_authenticated %}
+                      <li><a href="{% url 'logout' %}">Logout</a></li>
+                    {% else %}
+                      <li><a href="{% url 'login' %}">Login</a></li>
+                    {% endif %}
+                  </ul>
+                  <a href="#contact" class="btn header-btn mobile-quote-btn">Get A Quote</a>
+                </nav>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
       <!-- Header End -->
     </header>
 
@@ -802,5 +917,34 @@ figure.snip1157 .author h5 span {
     <script src="{% static 'assets/js/jquery.ajaxchimp.min.js' %}"></script>
     <script src="{% static 'assets/js/plugins.js' %}"></script>
     <script src="{% static 'assets/js/main.js' %}"></script>
-  </body>
-</html>
+    <script>
+      // Mobile Menu Toggle
+      document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        if (mobileMenuBtn) {
+          mobileMenuBtn.addEventListener('click', function() {
+            this.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+          });
+
+          // Close menu when a link is clicked
+          const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+          mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+              mobileMenuBtn.classList.remove('active');
+              mobileMenu.classList.remove('active');
+            });
+          });
+
+          // Close menu when clicking outside
+          document.addEventListener('click', function(event) {
+            if (!event.target.closest('.d-block.d-lg-none')) {
+              mobileMenuBtn.classList.remove('active');
+              mobileMenu.classList.remove('active');
+            }
+          });
+        }
+      });
+    </script>
