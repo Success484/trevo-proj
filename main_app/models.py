@@ -27,7 +27,7 @@ class Order(models.Model):
     payment_status = models.CharField(max_length=10, choices=PAYMENT_CHOICES, default='pending')
     # DESTINATION DETAILS
     receiver_name = models.CharField(max_length=100)
-    receiver_email = models.EmailField(max_length=200)
+    receiver_Phone_number = models.CharField(max_length=200)
     receiver_address = models.CharField(max_length=255)
     date_of_delivery = models.CharField(max_length=255)
     # ORIGIN
