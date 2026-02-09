@@ -34,10 +34,12 @@ DEBUG = True
 ALLOWED_HOSTS = [
     "trevo-proj-production.up.railway.app",
     "localhost",
+    "expressdelivery.website"
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     "https://trevo-proj-production.up.railway.app",
+    "https://expressdelivery.website"
 ]
 
 if DEBUG:
