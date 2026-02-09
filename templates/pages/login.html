@@ -511,7 +511,6 @@ class CleanBankingLoginForm {
     }
     
     bindEvents() {
-        this.form.addEventListener('submit', (e) => this.handleSubmit(e));
         this.emailInput.addEventListener('blur', () => this.validateEmail());
         this.passwordInput.addEventListener('blur', () => this.validatePassword());
         this.emailInput.addEventListener('input', () => this.clearError('email'));
@@ -631,9 +630,4 @@ class CleanBankingLoginForm {
         }, 2500);
     }
 }
-
-// Initialize the form when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    new CleanBankingLoginForm();
-});
     </script>
