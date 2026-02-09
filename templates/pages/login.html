@@ -494,38 +494,6 @@ body {
     <script>
         // Clean Banking Login Form JavaScript
 class CleanBankingLoginForm {
-    constructor() {
-        this.form = document.getElementById('loginForm');
-        this.emailInput = document.getElementById('email');
-        this.passwordInput = document.getElementById('password');
-        this.passwordToggle = document.getElementById('passwordToggle');
-        this.submitButton = this.form.querySelector('.login-btn');
-        this.successMessage = document.getElementById('successMessage');
-        
-        this.init();
-    }
-    
-    init() {
-        this.bindEvents();
-        this.setupPasswordToggle();
-    }
-    
-    bindEvents() {
-        this.emailInput.addEventListener('blur', () => this.validateEmail());
-        this.passwordInput.addEventListener('blur', () => this.validatePassword());
-        this.emailInput.addEventListener('input', () => this.clearError('email'));
-        this.passwordInput.addEventListener('input', () => this.clearError('password'));
-    }
-    
-    setupPasswordToggle() {
-        this.passwordToggle.addEventListener('click', () => {
-            const type = this.passwordInput.type === 'password' ? 'text' : 'password';
-            this.passwordInput.type = type;
-            
-            this.passwordToggle.classList.toggle('show-password', type === 'text');
-        });
-    }
-    
     validateEmail() {
         const email = this.emailInput.value.trim();
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
