@@ -1,13 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
 {% load static %}
+{% load i18n %}
 
 <div class="message-wrapper">
   {% if messages %}
     {% for message in messages %}
       <div class="alert alert-success" role="alert" tabindex="0">
         {{ message }}
-        <button type="button" class="alert-close" aria-label="Close message">&times;</button>
+        <button type="button" class="alert-close" aria-label=" Close message">&times;</button>
       </div>
     {% endfor %}
   {% endif %}
@@ -16,7 +17,7 @@
 <form method="POST" novalidate class="courier-form">
   {% csrf_token %}
   {{ form.as_p }}
-  <button type="submit" class="btn-submit">Submit Booking</button>
+  <button type="submit" class="btn-submit">{% trans "Submit Booking" %}</button>
 </form>
 
 <script>

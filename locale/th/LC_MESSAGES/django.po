@@ -1,0 +1,501 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-17 19:45+0100\n"
+"PO-Revision-Date: 2026-02-17 19:45+0100\n"
+"Last-Translator: Success484 <>\n"
+"Language-Team: Thai <th@li.org>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: .\templates\base.html:710 .\templates\base.html:739
+msgid "Home"
+msgstr "หน้าแรก"
+
+#: .\templates\base.html:711 .\templates\base.html:740
+msgid "About"
+msgstr "เกี่ยวกับ"
+
+#: .\templates\base.html:712 .\templates\base.html:741
+msgid "Services"
+msgstr "บริการ"
+
+#: .\templates\base.html:713 .\templates\base.html:742
+#: .\templates\base.html:794
+msgid "Contact"
+msgstr "ติดต่อ"
+
+#: .\templates\base.html:715 .\templates\base.html:744
+msgid "Logout"
+msgstr "ออกจากระบบ"
+
+#: .\templates\base.html:717 .\templates\base.html:746
+msgid "Login"
+msgstr "เข้าสู่ระบบ"
+
+#: .\templates\base.html:725 .\templates\base.html:749
+msgid "Get A Quote"
+msgstr "ขอใบเสนอราคา"
+
+#: .\templates\base.html:776
+msgid "We Understand The Importance Approaching Each Work!"
+msgstr "เราให้ความสำคัญกับการจัดการงานแต่ละชิ้นอย่างดีที่สุด"
+
+#: .\templates\base.html:790
+msgid "COMPANY"
+msgstr "บริษัท"
+
+#: .\templates\base.html:792 .\templates\pages\index.html:205
+msgid "About Us"
+msgstr "เกี่ยวกับเรา"
+
+#: .\templates\base.html:793 .\templates\pages\index.html:136
+msgid "Our Services"
+msgstr "บริการของเรา"
+
+#: .\templates\base.html:795
+msgid "Blog"
+msgstr "บล็อก"
+
+#: .\templates\base.html:805
+msgid "Working Hours"
+msgstr "เวลาทำการ"
+
+#: .\templates\base.html:807
+msgid "Monday - Friday: 8am - 8pm"
+msgstr "จันทร์ - ศุกร์: 08:00 - 20:00"
+
+#: .\templates\base.html:808
+msgid "Saturday: 9am - 6pm"
+msgstr "เสาร์: 09:00 - 18:00"
+
+#: .\templates\base.html:809
+msgid "Sunday: 10am - 4pm"
+msgstr "อาทิตย์: 10:00 - 16:00"
+
+#: .\templates\base.html:810
+msgid "24/7 Support Available"
+msgstr "มีบริการสนับสนุนตลอด 24 ชั่วโมง"
+
+#: .\templates\base.html:820
+msgid "SERVICES"
+msgstr "บริการ"
+
+#: .\templates\base.html:822
+msgid "Domestic Delivery"
+msgstr "จัดส่งภายในประเทศ"
+
+#: .\templates\base.html:823
+msgid "International Shipping"
+msgstr "จัดส่งระหว่างประเทศ"
+
+#: .\templates\base.html:824
+msgid "Same-Day Delivery"
+msgstr "จัดส่งภายในวันเดียวกัน"
+
+#: .\templates\base.html:825
+msgid "Freight & Logistics"
+msgstr "การขนส่งและโลจิสติกส์"
+
+#: .\templates\base.html:826
+msgid "Tracking & Support"
+msgstr "การติดตามและการสนับสนุน"
+
+#: .\templates\base.html:844 .\templates\pages\index.html:319
+msgid "Express Delivery"
+msgstr "จัดส่งด่วน"
+
+#: .\templates\base.html:853
+msgid ""
+"Fast, reliable, and secure courier services worldwide. From small packages "
+"to bulk shipments, we deliver with care and speed."
+msgstr ""
+"บริการจัดส่งที่รวดเร็ว เชื่อถือได้ และปลอดภัยทั่วโลก ตั้งแต่พัสดุเล็กจนถึงการขนส่งจำนวนมาก เราจัดส่งด้วยความระมัดระวังและรวดเร็ว"
+
+#: .\templates\base.html:874
+msgid "Copyright"
+msgstr "ลิขสิทธิ์"
+
+#: .\templates\base.html:876
+msgid "All rights reserved"
+msgstr "สงวนลิขสิ���ธิ์"
+
+#: .\templates\pages\detail_form.html:20
+msgid "Submit Booking"
+msgstr "ส่งการจอง"
+
+#: .\templates\pages\index.html:43
+msgid "Safe & Reliable"
+msgstr "ปลอดภัยและเชื่อถือได้"
+
+#: .\templates\pages\index.html:43
+msgid "Logistic"
+msgstr "โลจิสติกส์"
+
+#: .\templates\pages\index.html:43
+msgid "Solutions!"
+msgstr "โซลูชัน!"
+
+#: .\templates\pages\index.html:70
+msgid "Submit tracking form"
+msgstr "ส่งแบบฟอร์มติดตาม"
+
+#: .\templates\pages\index.html:73
+msgid "Track & Trace"
+msgstr "ติดตามพัสดุ"
+
+#: .\templates\pages\index.html:79
+msgid "For order status inquiry"
+msgstr "สำหรับการสอบถามสถานะคำสั่งซื้อ"
+
+#: .\templates\pages\index.html:98
+msgid "Call Us Anytime"
+msgstr "โทรหาเราได้ตลอดเวลา"
+
+#: .\templates\pages\index.html:109
+msgid "Sunday CLOSED"
+msgstr "อาทิตย์ ปิดทำการ"
+
+#: .\templates\pages\index.html:137 .\templates\pages\index.html:353
+msgid "What We Can Do For You"
+msgstr "สิ่งที่เราสามารถทำให้คุณได้"
+
+#: .\templates\pages\index.html:148
+msgid "Land Delivery"
+msgstr "จัดส่งทางบก"
+
+#: .\templates\pages\index.html:150
+msgid ""
+"Fast and secure delivery across cities and towns. Our fleet of vehicles "
+"ensures your parcels reach their destination on time, every time."
+msgstr ""
+"การจัดส่งที่รวดเร็วและปลอดภัยระหว่างเมืองและตำบล ยานพาหนะของเราช่วยให้พัสดุถึงปลายทางตามเวลาทุกครั้ง"
+
+#: .\templates\pages\index.html:161
+msgid "Sea Cargo"
+msgstr "การขนส่งทางทะเล"
+
+#: .\templates\pages\index.html:163
+msgid ""
+"Reliable shipping solutions for bulk and international deliveries. We make "
+"overseas shipping smooth and affordable for your business."
+msgstr ""
+"โซลูชันการจัดส่งที่เชื่อถือได้สำหรับการขนส่งจำนวนมากและระหว่างประเทศ เราทำให้การจัดส่งต่างประเทศราบรื่นและคุ้มค่าสำหรับธุรกิจของคุณ"
+
+#: .\templates\pages\index.html:174
+msgid "Air Express"
+msgstr "ขนส่งทางอากาศ"
+
+#: .\templates\pages\index.html:176
+msgid ""
+"When speed matters most, our air courier service gets your package delivered "
+"worldwide in the shortest time possible."
+msgstr ""
+"เมื่อความเร็วเป็นสิ่งสำคัญ บริการขนส่งทางอากาศของเราจะจัดส่งพัสดุของคุณทั่วโลกในเวลาที่สั้นที่สุด"
+
+#: .\templates\pages\index.html:194
+msgid "About Our Company"
+msgstr "เกี่ยวกับบริษัทของเรา"
+
+#: .\templates\pages\index.html:196
+msgid "Reliable Courier & Delivery Solutions That Save Your Time!"
+msgstr "โซลูชันการจัดส่งที่เชื่อถือได้ ช่วยประหยัดเวลาของคุณ!"
+
+#: .\templates\pages\index.html:200
+msgid ""
+"We provide fast, secure, and affordable courier services designed to meet "
+"your delivery needs. From local dispatches to international shipments, our "
+"team ensures that every package is handled with care and delivered on time."
+msgstr ""
+"เรามอบบริการจัดส่งที่รวดเร็ว ปลอดภัย และราคาเข้าถึงได้ ออกแบบเพื่อตอบสนองความต้องการการจัดส่งของคุณ ตั้งแต่การส่งภายในประเทศจนถึงการส่งระหว่างประเทศ ทีมงานของเรารับประกันว่าพัสดุทุกชิ้นได้รับการดูแลและส่งถึงตรงเวลา"
+
+#: .\templates\pages\index.html:203
+msgid ""
+"With modern tracking systems and a dedicated support team, we make sending "
+"and receiving parcels simple and stress-free. Your trust is our priority."
+msgstr ""
+"ด้วยระบบติดตามสมัยใหม่และทีมสนับสนุนที่ทุ่มเท เราทำให้การส่งและรับพัสดุเป็นเรื่องง่ายและปราศจากความกังวล ความไว้วางใจของคุณคือสิ่งสำคัญสำหรับเรา"
+
+#: .\templates\pages\index.html:239
+msgid "Get a Quote for Free"
+msgstr "รับใบเสนอราคาฟรี"
+
+#: .\templates\pages\index.html:240
+msgid "Request a Free Delivery Quote"
+msgstr "ขอใบเสนอราคาการจัดส่งฟรี"
+
+#: .\templates\pages\index.html:242
+msgid ""
+"Send us the details of your shipment and we’ll provide you with a fast and "
+"transparent quote. No hidden charges — just reliable courier services "
+"tailored to your needs."
+msgstr ""
+"ส่งรายละเอียดการจัดส่งของคุณมาให้เรา และเราจะให้ใบเสนอราคาอย่างรวดเร็วและโปร่งใส ไม่มีค่าใช้จ่ายที่ซ่อนเร้น — เพียงบริการจัดส่งที่เชื่อถือได้ตามความต้องการของคุณ"
+
+#: .\templates\pages\index.html:268
+msgid "Delivery Type"
+msgstr "ประเภทการจัดส่ง"
+
+#: .\templates\pages\index.html:269
+msgid "Documents"
+msgstr "เอกสาร"
+
+#: .\templates\pages\index.html:270
+msgid "Parcels"
+msgstr "พัสดุ"
+
+#: .\templates\pages\index.html:271
+msgid "Bulk Shipments"
+msgstr "การขนส่งจำนวนมาก"
+
+#: .\templates\pages\index.html:272
+msgid "International Delivery"
+msgstr "จัดส่งระหว่างประเทศ"
+
+#: .\templates\pages\index.html:311
+msgid "Extra services:"
+msgstr "บริการเสริม:"
+
+#: .\templates\pages\index.html:315
+msgid "Freight"
+msgstr "ค่าขนส่ง"
+
+#: .\templates\pages\index.html:323
+msgid "Insurance"
+msgstr "ประกันภัย"
+
+#: .\templates\pages\index.html:327
+msgid "Packaging"
+msgstr "การบรรจุ"
+
+#: .\templates\pages\index.html:334
+msgid "Request a Quote"
+msgstr "ขอใบเสนอราคา"
+
+#: .\templates\pages\index.html:352
+msgid "Our Team Members"
+msgstr "สมาชิกทีมของเรา"
+
+#: .\templates\pages\index.html:364
+msgid "Logistics Manager"
+msgstr "ผู้จัดการโลจิสติกส์"
+
+#: .\templates\pages\index.html:375
+msgid "Operations Supervisor"
+msgstr "หัวหน้างานปฏิบัติการ"
+
+#: .\templates\pages\index.html:386
+msgid "Customer Service Lead"
+msgstr "หัวหน้าฝ่ายบริการลูกค้า"
+
+#: .\templates\pages\index.html:407
+msgid "Clients Testimonials"
+msgstr "คำรับรองจากลูกค้า"
+
+#: .\templates\pages\index.html:408
+msgid "What Our Clients Say!"
+msgstr "ลูกค้าของเราพูดว่า!"
+
+#: .\templates\pages\index.html:423
+msgid ""
+"Fast, reliable, and always on time. Our shipments arrive exactly as "
+"scheduled, and tracking is always accurate. Truly a dependable logistics "
+"partner."
+msgstr ""
+"รวดเร็ว เชื่อถือได้ และตรงต่อเวลา การจัดส่งของเรามาถึงตามกำหนดเสมอและการติดตามแม่นยำ จริง ๆ แล้วเราเป็นพันธมิตรด้านโลจิสติกส์ที่ไว้ใจได้"
+
+#: .\templates\pages\index.html:431
+msgid "Retail Business Owner"
+msgstr "เจ้าของธุรกิจค้าปลีก"
+
+#: .\templates\pages\index.html:436
+msgid ""
+"Affordable pricing with premium service. Their delivery speed and customer "
+"support are unmatched. We trust them with all our logistics operations."
+msgstr ""
+"ราคาที่เอื้อมถึงพร้อมบริการระดับพรีเมียม ความรวดเร็วในการจัดส่งและการสนับสนุนลูกค้ายอดเยี่ยม เราไว้ใจให้พวกเขาดูแลการดำเนินงานโลจิสติกส์ทั้งหมดของเรา"
+
+#: .\templates\pages\index.html:444
+msgid "E-commerce Manager"
+msgstr "ผู้จัดการอีคอมเมิร์ซ"
+
+#: .\templates\pages\index.html:449
+msgid ""
+"Reliable, fast, and secure logistics. Every delivery arrives safely and on "
+"time. Highly recommended for any business that values efficiency."
+msgstr ""
+"โลจิสติกส์ที่เชื่อถือได้ รวดเร็ว และปลอดภัย การจัดส่งทุกครั้งมาถึงอย่างปลอดภัยและตรงเวลา แนะนำอย่างยิ่งสำหรับธุรกิจที่ให้ความสำคัญกับประสิทธิภาพ"
+
+#: .\templates\pages\index.html:457
+msgid "Supply Chain Director"
+msgstr "ผู้อำนวยการซัพพลายเชน"
+
+#: .\templates\pages\index.html:474
+msgid "Our Recent News"
+msgstr "ข่าวสารล่าสุดของเรา"
+
+#: .\templates\pages\index.html:475
+msgid "Courier Blog"
+msgstr "บล็อกการจัดส่ง"
+
+#: .\templates\pages\index.html:486
+msgid "Blog Image 1"
+msgstr "รูปบล็อก 1"
+
+#: .\templates\pages\index.html:493
+msgid "MAY"
+msgstr "พ.ค."
+
+#: .\templates\pages\index.html:498
+msgid "Your Package Is Always Safe And Secure"
+msgstr "พัสดุของคุณปลอดภัยเสมอ"
+
+#: .\templates\pages\index.html:509
+msgid "Blog Image 2"
+msgstr "รูปบล็อก 2"
+
+#: .\templates\pages\index.html:515
+msgid "AUG"
+msgstr "ส.ค."
+
+#: .\templates\pages\index.html:520
+msgid "Express Delivery Can Boost Your Business"
+msgstr "การจัดส่งด่วนช่วยเสริมธุรกิจของคุณ"
+
+#: .\templates\pages\index.html:533
+msgid "Blog Image 3"
+msgstr "รูปบล็อก 3"
+
+#: .\templates\pages\index.html:540
+msgid "SEP"
+msgstr "ก.ย."
+
+#: .\templates\pages\index.html:545
+msgid "You Track Your Parcel in Real Time"
+msgstr "คุณติดตามพัสดุของคุณแบบเรียลไทม์"
+
+#: .\templates\pages\tracking_detail.html:5
+msgid "Tracking:"
+msgstr "ติดตาม:"
+
+#: .\templates\pages\tracking_detail.html:11
+msgid "📦 Expected Delivery Date :"
+msgstr "📦 วันที่คาดว่าจะจัดส่ง :"
+
+#: .\templates\pages\tracking_detail.html:16
+msgid "📍 Status :"
+msgstr "📍 สถานะ :"
+
+#: .\templates\pages\tracking_detail.html:21
+msgid "🚚 Date Shipped :"
+msgstr "🚚 วันที่จัดส่ง :"
+
+#: .\templates\pages\tracking_detail.html:29
+msgid "📦 Shipment Details"
+msgstr "📦 รายละเอียดการจัดส่ง"
+
+#: .\templates\pages\tracking_detail.html:30
+msgid "Quantity:"
+msgstr "จำนวน:"
+
+#: .\templates\pages\tracking_detail.html:31
+msgid "Weight:"
+msgstr "น้ำหนัก:"
+
+#: .\templates\pages\tracking_detail.html:31
+msgid "kg"
+msgstr "กก."
+
+#: .\templates\pages\tracking_detail.html:32
+msgid "Service Type:"
+msgstr "ประเภทบริการ:"
+
+#: .\templates\pages\tracking_detail.html:33
+msgid "Description:"
+msgstr "คำอธิบาย:"
+
+#: .\templates\pages\tracking_detail.html:34
+msgid "Payment Status:"
+msgstr "สถานะการชำระเงิน:"
+
+#: .\templates\pages\tracking_detail.html:39
+msgid "📍 Destination Details"
+msgstr "📍 รายละเอียดปลายทาง"
+
+#: .\templates\pages\tracking_detail.html:40
+msgid "Receiver Name:"
+msgstr "ชื่อผู้รับ:"
+
+#: .\templates\pages\tracking_detail.html:41
+msgid "Receiver Email:"
+msgstr "อีเมลผู้รับ:"
+
+#: .\templates\pages\tracking_detail.html:42
+msgid "Receiver Address:"
+msgstr "ที่อยู่ผู้รับ:"
+
+#: .\templates\pages\tracking_detail.html:43
+msgid "Delivery Location:"
+msgstr "สถานที่จัดส่ง:"
+
+#: .\templates\pages\tracking_detail.html:44
+msgid "Delivery Date:"
+msgstr "วันที่จัดส่ง:"
+
+#: .\templates\pages\tracking_detail.html:49
+msgid "🚚 Origin"
+msgstr "🚚 ต้นทาง"
+
+#: .\templates\pages\tracking_detail.html:50
+msgid "Sender Name:"
+msgstr "ชื่อผู้ส่ง:"
+
+#: .\templates\pages\tracking_detail.html:51
+msgid "Sender Address:"
+msgstr "ที่อยู่ผู้ส่ง:"
+
+#: .\templates\pages\tracking_detail.html:52
+msgid "Pickup Address:"
+msgstr "ที่อยู่สำหรับรับสินค้า:"
+
+#: .\templates\pages\tracking_detail.html:53
+msgid "Created At:"
+msgstr "สร้างเมื่อ:"
+
+#: .\templates\pages\tracking_detail.html:57
+msgid "Map showing current package location"
+msgstr "แผนที่แสดงตำแหน่งพัสดุปัจจุบัน"
+
+#: .\templates\pages\tracking_detail.html:58
+msgid "Map"
+msgstr "แผนที่"
+
+#: .\templates\pages\tracking_detail.html:60
+msgid "Package location map"
+msgstr "แผนที่ตำแหน่งพัสดุ"
+
+#: .\templates\pages\tracking_detail.html:63
+msgid "No location coordinates available yet for this package."
+msgstr "ยังไม่มีพิกัดตำแหน่งสำหรับพัสดุชิ้นนี้"
+
+#: .\templates\pages\tracking_detail.html:69
+msgid "Tracking history"
+msgstr "ประวัติการติดตาม"
+
+#: .\templates\pages\tracking_detail.html:70
+msgid "Tracking History"
+msgstr "ประวัติการติดตาม"
+
+#: .\templates\pages\tracking_detail.html:81
+msgid "No tracking events yet."
+msgstr "ยังไม่มีเหตุการณ์การติดตาม"

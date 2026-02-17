@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
@@ -701,55 +702,56 @@ figure.snip1157 .author h5 span {
 
           <!-- Desktop Menu and Mobile Toggle in same column -->
           <div class="col-xl-10 col-lg-10 col-4">
-            <div class="row align-items-center justify-content-end h-100">
-              <!-- Main-menu (Desktop only) -->
-              <div class="main-menu d-none d-lg-block">
-                <nav>
-                  <ul id="navigation">
-                    <li><a href="{% url 'home' %}">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
+    <div class="row align-items-center justify-content-end h-100">
+        <!-- Main-menu (Desktop only) -->
+        <div class="main-menu d-none d-lg-block">
+            <nav>
+                <ul id="navigation">
+                    <li><a href="{% url 'home' %}">{% trans "Home" %}</a></li>
+                    <li><a href="#about">{% trans "About" %}</a></li>
+                    <li><a href="#services">{% trans "Services" %}</a></li>
+                    <li><a href="#contact">{% trans "Contact" %}</a></li>
                     {% if request.user.is_authenticated %}
-                      <li><a href="{% url 'logout' %}">Logout</a></li>
+                        <li><a href="{% url 'logout' %}">{% trans "Logout" %}</a></li>
                     {% else %}
-                      <li><a href="{% url 'login' %}">Login</a></li>
+                        <li><a href="{% url 'login' %}">{% trans "Login" %}</a></li>
                     {% endif %}
-                  </ul>
-                </nav>
-              </div>
+                </ul>
+            </nav>
+        </div>
 
-              <!-- Header-btn (Desktop only) -->
-              <div class="header-right-btn d-none d-lg-block ml-20">
-                <a href="#contact" class="btn header-btn">Get A Quote</a>
-              </div>
+        <!-- Header-btn (Desktop only) -->
+        <div class="header-right-btn d-none d-lg-block ml-20">
+            <a href="#contact" class="btn header-btn">{% trans "Get A Quote" %}</a>
+        </div>
 
-              <!-- Mobile Menu Toggle -->
-              <div class="d-block d-lg-none">
-                <button class="navbar-toggler" type="button" id="mobileMenuBtn" aria-label="Toggle navigation">
-                  <span class="hamburger">
+        <!-- Mobile Menu Toggle -->
+        <div class="d-block d-lg-none">
+            <button class="navbar-toggler" type="button" id="mobileMenuBtn" aria-label="Toggle navigation">
+                <span class="hamburger">
                     <span></span>
                     <span></span>
                     <span></span>
-                  </span>
-                </button>
-                <nav class="mobile-menu" id="mobileMenu">
-                  <ul>
-                    <li><a href="{% url 'home' %}">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                </span>
+            </button>
+            <nav class="mobile-menu" id="mobileMenu">
+                <ul>
+                    <li><a href="{% url 'home' %}">{% trans "Home" %}</a></li>
+                    <li><a href="#about">{% trans "About" %}</a></li>
+                    <li><a href="#services">{% trans "Services" %}</a></li>
+                    <li><a href="#contact">{% trans "Contact" %}</a></li>
                     {% if request.user.is_authenticated %}
-                      <li><a href="{% url 'logout' %}">Logout</a></li>
+                        <li><a href="{% url 'logout' %}">{% trans "Logout" %}</a></li>
                     {% else %}
-                      <li><a href="{% url 'login' %}">Login</a></li>
+                        <li><a href="{% url 'login' %}">{% trans "Login" %}</a></li>
                     {% endif %}
-                  </ul>
-                  <a href="#contact" class="btn header-btn mobile-quote-btn">Get A Quote</a>
-                </nav>
-              </div>
-            </div>
-          </div>
+                </ul>
+                <a href="#contact" class="btn header-btn mobile-quote-btn">{% trans "Get A Quote" %}</a>
+            </nav>
+        </div>
+    </div>
+</div>
+
         </div>
       </div>
     </div>
@@ -762,135 +764,126 @@ figure.snip1157 .author h5 span {
     {% endblock content %}
 
     <footer>
-      <!--? Footer Start-->
-      <div class="footer-area footer-bg">
-        <div class="container">
-          <div class="footer-top footer-padding">
-            <!-- footer Heading -->
-            <div class="footer-heading">
-              <div class="row justify-content-between">
-                <div class="col-xl-6 col-lg-8 col-md-8">
-                  <div class="wantToWork-caption wantToWork-caption2">
-                    <h2>We Understand The Importance Approaching Each Work!</h2>
-                  </div>
-                </div>
-                <div style="margin-left: 8.5px;">
-                  <span style="font-size: 16px;" class="contact-number">expressdelivery647435@gmail.com@gmail.com</span>
-                </div>
+  <!--? Footer Start-->
+  <div class="footer-area footer-bg">
+    <div class="container">
+      <div class="footer-top footer-padding">
+        <!-- footer Heading -->
+        <div class="footer-heading">
+          <div class="row justify-content-between">
+            <div class="col-xl-6 col-lg-8 col-md-8">
+              <div class="wantToWork-caption wantToWork-caption2">
+                <h2>{% trans "We Understand The Importance Approaching Each Work!" %}</h2>
               </div>
             </div>
-            <!-- Footer Menu -->
-            <div class="row d-flex justify-content-between">
-              <!-- Company Info -->
-              <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
-                <div class="single-footer-caption mb-50">
-                  <div class="footer-tittle">
-                    <h4>COMPANY</h4>
-                    <ul>
-                      <li><a href="#about">About Us</a></li>
-                      <li><a href="#services">Our Services</a></li>
-                      <li><a href="#contact">Contact</a></li>
-                      <li><a href="#blog">Blog</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Working Hours -->
-              <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-                <div class="single-footer-caption mb-50">
-                    <div class="footer-tittle">
-                    <h4>Working Hours</h4>
-                    <ul>
-                        <li><a href="javascript:void(0)">Monday - Friday: 8am - 8pm</a></li>
-                        <li><a href="javascript:void(0)">Saturday: 9am - 6pm</a></li>
-                        <li><a href="javascript:void(0)">Sunday: 10am - 4pm</a></li>
-                        <li><a href="javascript:void(0)">24/7 Support Available</a></li>
-                    </ul>
-                    </div>
-                </div>
+            <div style="margin-left: 8.5px;">
+              <span style="font-size: 16px;" class="contact-number">expressdelivery647435@gmail.com@gmail.com</span>
             </div>
-
-
-              <!-- Services -->
-              <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-                <div class="single-footer-caption mb-50">
-                  <div class="footer-tittle">
-                    <h4>SERVICES</h4>
-                    <ul>
-                      <li><a href="javascript:void(0)">Domestic Delivery</a></li>
-                      <li><a href="javascript:void(0)">International Shipping</a></li>
-                      <li><a href="javascript:void(0)">Same-Day Delivery</a></li>
-                      <li><a href="javascript:void(0)">Freight & Logistics</a></li>
-                      <li><a href="javascript:void(0)">Tracking & Support</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Logo + Contact -->
-              <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6">
-                <div class="single-footer-caption mb-50">
-                  <!-- logo -->
-                  <div class="footer-logo">
-                    <div class="logo" style="display: flex; align-items: center; height: 100px;">
-                    <div>
-                      <a href="{% url 'home' %}"
-                        ><img
-                          src="{% static 'assets/img/logo/logo.png' %}"
-                          alt=""
-                          height="55px"
-                          width="60px"
-                      />
-                    </div>
-                    <div style="position: relative; top: 10px;">
-                      <p style="color: orange; font-size: medium; width: 300px;"><span style="font-size: 24px;"> Express Delivery </span></p></a>
-                    </div>
-                  </div></a>
-                  </div>
-                  <div class="footer-tittle">
-                    <div class="footer-pera">
-                      <p class="info1">
-                        Fast, reliable, and secure courier services worldwide.
-                        From small packages to bulk shipments, we deliver with
-                        care and speed.
-                      </p>
-                    </div>
-                  </div>
-                  <!-- Footer Social (icons only, no links) -->
-                  <div class="footer-social">
-                    <a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a>
-                    <a href="javascript:void(0)"><i class="fab fa-twitter"></i></a>
-                    <a href="javascript:void(0)"><i class="fas fa-globe"></i></a>
-                    <a href="javascript:void(0)"><i class="fab fa-instagram"></i></a>
-                </div>
-
-                </div>
+          </div>
+        </div>
+        <!-- Footer Menu -->
+        <div class="row d-flex justify-content-between">
+          <!-- Company Info -->
+          <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
+            <div class="single-footer-caption mb-50">
+              <div class="footer-tittle">
+                <h4>{% trans "COMPANY" %}</h4>
+                <ul>
+                  <li><a href="#about">{% trans "About Us" %}</a></li>
+                  <li><a href="#services">{% trans "Our Services" %}</a></li>
+                  <li><a href="#contact">{% trans "Contact" %}</a></li>
+                  <li><a href="#blog">{% trans "Blog" %}</a></li>
+                </ul>
               </div>
             </div>
           </div>
-          <!-- Footer Bottom -->
-          <div class="footer-bottom">
-            <div class="row d-flex align-items-center">
-              <div class="col-lg-12">
-                <div class="footer-copy-right text-center">
-                  <p>
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    Copyright &copy;
-                    <script>
-                      document.write(new Date().getFullYear());
-                    </script>
-                    All rights reserved
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+
+          <!-- Working Hours -->
+          <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+            <div class="single-footer-caption mb-50">
+              <div class="footer-tittle">
+                <h4>{% trans "Working Hours" %}</h4>
+                <ul>
+                  <li><a href="javascript:void(0)">{% trans "Monday - Friday: 8am - 8pm" %}</a></li>
+                  <li><a href="javascript:void(0)">{% trans "Saturday: 9am - 6pm" %}</a></li>
+                  <li><a href="javascript:void(0)">{% trans "Sunday: 10am - 4pm" %}</a></li>
+                  <li><a href="javascript:void(0)">{% trans "24/7 Support Available" %}</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Services -->
+          <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+            <div class="single-footer-caption mb-50">
+              <div class="footer-tittle">
+                <h4>{% trans "SERVICES" %}</h4>
+                <ul>
+                  <li><a href="javascript:void(0)">{% trans "Domestic Delivery" %}</a></li>
+                  <li><a href="javascript:void(0)">{% trans "International Shipping" %}</a></li>
+                  <li><a href="javascript:void(0)">{% trans "Same-Day Delivery" %}</a></li>
+                  <li><a href="javascript:void(0)">{% trans "Freight & Logistics" %}</a></li>
+                  <li><a href="javascript:void(0)">{% trans "Tracking & Support" %}</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Logo + Contact -->
+          <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6">
+            <div class="single-footer-caption mb-50">
+              <!-- logo -->
+              <div class="footer-logo">
+                <div class="logo" style="display: flex; align-items: center; height: 100px;">
+                  <div>
+                    <a href="{% url 'home' %}">
+                      <img src="{% static 'assets/img/logo/logo.png' %}" alt="" height="55px" width="60px"/>
+                  </div>
+                  <div style="position: relative; top: 10px;">
+                    <p style="color: orange; font-size: medium; width: 300px;">
+                      <span style="font-size: 24px;">{% trans "Express Delivery" %}</span>
+                    </p>
+                  </div>
+                  </a>
+                </div>
+              </div>
+              <div class="footer-tittle">
+                <div class="footer-pera">
+                  <p class="info1">
+                    {% trans "Fast, reliable, and secure courier services worldwide. From small packages to bulk shipments, we deliver with care and speed." %}
                   </p>
                 </div>
+              </div>
+              <!-- Footer Social (icons only, no links) -->
+              <div class="footer-social">
+                <a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a>
+                <a href="javascript:void(0)"><i class="fab fa-twitter"></i></a>
+                <a href="javascript:void(0)"><i class="fas fa-globe"></i></a>
+                <a href="javascript:void(0)"><i class="fab fa-instagram"></i></a>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- Footer End-->
-    </footer>
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div class="row d-flex align-items-center">
+          <div class="col-lg-12">
+            <div class="footer-copy-right text-center">
+              <p>
+                {% trans "Copyright" %} &copy;
+                <script>document.write(new Date().getFullYear());</script>
+                {% trans "All rights reserved" %}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer End-->
+</footer>
+
     <!-- Scroll Up -->
     <div id="back-top">
       <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
